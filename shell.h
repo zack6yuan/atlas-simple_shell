@@ -14,8 +14,8 @@
 #define MAX_INPUT_SIZE 1024
 #define MAX_ARGS 64
 
-char* read_input();
-char** parse_input(char* input);
+char *read_input(void);
+char **parse_input(char* input);
 void execute_command(char *command);
 
 #endif

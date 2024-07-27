@@ -6,7 +6,7 @@
  * Returns a pointer to the input string, or NULL if an error occurs
  */
 
-char* read_input(void)
+char *read_input(void)
 {
 char *input;
 size_t len;
