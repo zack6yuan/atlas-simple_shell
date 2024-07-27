@@ -12,7 +12,7 @@ char **parse_input(char *input)
 char **args;
 char *arg;
 int i = 0;
-args = malloc(MAX_ARGS *sizeof(char*));
+args = malloc(MAX_ARGS * sizeof(char *));
 if (!args)
 {
 perror("malloc");
@@ -26,5 +26,5 @@ i++;
 arg = strtok(NULL, " ");
 }
 args[i] = NULL;
-return args;
+return (args);
 }
