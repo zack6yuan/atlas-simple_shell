@@ -15,7 +15,7 @@
 #define MAX_ARGS 64
 
 char *read_input(void);
-char **parse_input(char* input);
+char **parse_input(char *input);
 void execute_command(char *command);
 
 #endif
