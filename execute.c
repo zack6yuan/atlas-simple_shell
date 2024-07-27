@@ -2,7 +2,7 @@
 
 /**
  * Executes a command using execvp.
- * 
+ *
  * command: the command to execute
  */
 
@@ -22,7 +22,8 @@ if (pid == 0)
 execlp(command, command, (char *)NULL);
 perror("execlp");
 exit(EXIT_FAILURE);
-} else
+}
+else
 {
 waitpid(pid, &status, 0);
 }
