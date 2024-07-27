@@ -3,16 +3,19 @@
 /**
  * prompts the user for input, reads the input, and executes the command
  * then frees the input
- * 
+ *
  * returns 0 on success, or -1 if an error occurs
  */
-int main() {
+int main (void)
+{
 char *input;
-while (1) {
+while (1)
+{
 printf(PROMPT);
 fflush(stdout);
 input = read_input();
-if (input == NULL) {
+if (input == NULL)
+{
 printf("\n");
 break;            
 }
@@ -22,7 +25,8 @@ if (strcmp(input, "exit") == 0)
 free(input);
 break;
 }
-if (strlen(input) > 0) {
+if (strlen(input) > 0)
+{
 execute_command(input);
 }
 free(input);
