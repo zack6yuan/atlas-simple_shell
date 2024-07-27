@@ -17,7 +17,7 @@ input = read_input();
 if (input == NULL)
 {
 printf("\n");
-break;   
+break;
 }
 
 if (strcmp(input, "exit") == 0)
