@@ -6,7 +6,7 @@
  *
  * returns 0 on success, or -1 if an error occurs
  */
-int main (void)
+int main(void)
 {
 char *input;
 while (1)
@@ -17,7 +17,7 @@ input = read_input();
 if (input == NULL)
 {
 printf("\n");
-break;            
+break;   
 }
 
 if (strcmp(input, "exit") == 0)
@@ -31,5 +31,5 @@ execute_command(input);
 }
 free(input);
 }
-return 0;
+return (0);
 }
