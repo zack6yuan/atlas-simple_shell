@@ -1,11 +1,9 @@
 #include "shell.h"
 
 /**
- * Reads a line of input from stdin.
- *
- * Returns a pointer to the input string, or NULL if an error occurs
+ * read_input - Reads a line of input from stdin.
+ * Return: a pointer to the input string, or NULL if an error occurs
  */
-
 char *read_input(void)
 {
 char *input;

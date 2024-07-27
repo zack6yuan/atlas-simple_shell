@@ -1,11 +1,9 @@
 #include "shell.h"
 
 /**
- * Parses a line of input into an array of arguments.
- *
- * input: the input string to parse
- *
- * Returns an array of arguments, or NULL if an error occurs
+ * parse_input - Parses a line of input into an array of arguments.
+ * @input: the input string to parse
+ * Return: an array of arguments, or NULL if an error occurs
  */
 char **parse_input(char *input)
 {

@@ -1,9 +1,9 @@
 #include "shell.h"
 
 /**
- * Executes a command using execvp.
- *
- * command: the command to execute
+ * execute_command - executes a command using execvp.
+ * @command: the command to execute
+ * Return: void
  */
 
 void execute_command(char *command)

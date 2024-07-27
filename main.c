@@ -1,10 +1,9 @@
 #include "shell.h"
 
 /**
- * prompts the user for input, reads the input, and executes the command
+ * main - prompts the user for input, reads the input, and executes the command
  * then frees the input
- *
- * returns 0 on success, or -1 if an error occurs
+ * Return: 0 on success, or -1 if an error occurs
  */
 int main(void)
 {
