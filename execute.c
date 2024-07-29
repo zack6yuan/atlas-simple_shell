@@ -19,7 +19,7 @@ void execute_command(char *command)
     }
     if (pid == 0)
     {
-        execlp(command, command, (char *)NULL);
+        execlp(command, command, NULL);
         perror("execlp");
         exit(EXIT_FAILURE);
     }
@@ -27,4 +27,4 @@ void execute_command(char *command)
     {
         waitpid(pid, &status, 0); /*suspends the parent until child completes*/
     }
-    }
+}

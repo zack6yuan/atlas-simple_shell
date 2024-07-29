@@ -4,6 +4,7 @@ simple_shell
 .SH DESCRIPTION
 a simplified version of the unix shell that receives and interprets commands, and gives user feedback. 
 .SH OPTIONS
+Standard bash commands, run man bash for more information 
 .SH COMPILATION
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
 .SH AUTHORS
