@@ -8,32 +8,32 @@
  */
 int main(void)
 {
-    char *input;
+    char *input; /*pointer to char*/
 
-    while (1)
+    while (1) /*start infinite loop*/
     {
-        printf(PROMPT);
-        fflush(stdout);
-        input = read_input();
+        printf(PROMPT); /*print prompt. defined in shell.h*/
+        fflush(stdout); /*ensure prompt is displayed correctly*/
+        input = read_input(); /*reads input from the user*/
 
-        if (input == NULL)
+        if (input == NULL) /*if input = NULL, reaches EOF, print newline*/
         {
             printf("\n");
-            break;
-        }
+            break; /*breaks the loop*/
+        } 
 
-        if (strcmp(input, "exit") == 0)
+        if (strcmp(input, "exit") == 0) /*checks if input string is = "exit"*/
         {
-            free(input);
-            break;
+            free(input); /*frees memory for the input string*/
+            break; /*breaks the lloop while input = "exit"*/
         }
 
-        if (strlen(input) > 0)
+        if (strlen(input) > 0) /*while input str is not empty*/
         {
-            execute_command(input);
+            execute_command(input); /*call the execute command*/
         }
 
-        free(input);
+        free(input); /*frees memory allocated for the input string after processing*/
     }
 
     return (0);
