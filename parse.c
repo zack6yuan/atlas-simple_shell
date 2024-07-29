@@ -7,24 +7,24 @@
  */
 char **parse_input(char *input)
 {
-    char **args;
-    char *arg;
+    char **args; /*array of strings*/
+    char *arg; /*string*/
     int i = 0;
 
-    args = malloc(MAX_ARGS * sizeof(char *));
-    if (!args)
+    args = malloc(MAX_ARGS * sizeof(char *)); /*memory allocated for array args*/
+    if (!args) /*checks if malloc failed*/
     {
         perror("malloc");
-        exit(EXIT_FAILURE);
+        exit(EXIT_FAILURE); /*exits with failure status*/
     }
-    arg = strtok(input, " ");
+    arg = strtok(input, " "); /*split input string into tokens, seperated by spaces*/
 
-    while (arg != NULL)
+    while (arg != NULL) /*split until no more tokens, and increment*/
     {
         args[i] = arg;
         i++;
         arg = strtok(NULL, " ");
     }
     args[i] = NULL;
-    return (args);
+    return (args); /*args array is returned*/
 }
