@@ -25,7 +25,7 @@ char *read_input(void)
     }
     input[bytes] = '\0'; /*adds NULL to show string end*/
 
-    len = strlen(input);
+    size_t len = strlen(input);
 
     if (len > 0 && input[len - 1] == '\n') /*calculate length of input string*/
     {
