@@ -1,0 +1,11 @@
+.TH simple_shell
+.SH NAME
+simple_shell
+.SH DESCRIPTION
+a simplified version of the unix shell that receives and interprets commands, and gives user feedback. 
+.SH OPTIONS
+.SH COMPILATION
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
+.SH AUTHORS
+Zack Yuan
+Tyler Whitchurch
