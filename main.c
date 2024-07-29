@@ -2,8 +2,7 @@
 
 /**
  * main - Prompts the user for input, reads the input, and executes the command.
- *        Then frees the input.
- *
+ * Then frees the input.
  * Return: 0 on success, or -1 if an error occurs.
  */
 int main(void)
