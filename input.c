@@ -8,6 +8,7 @@ char *read_input(void)
 {
     char *input;
     size_t len;
+    ssize_t bytes;
     input = malloc(MAX_INPUT_SIZE); /*allocate memory for the input string*/
 
     if (!input) /*checks if malloc failed*/
@@ -16,20 +17,14 @@ char *read_input(void)
         exit(EXIT_FAILURE); /*exits with failure status*/
     }
 
-    if (fgets(input, MAX_INPUT_SIZE, stdin) == NULL)
+    bytes = read(STDIN_FILENO, input, MAX_INPUT_SIZE - 1);
+    if (bytes <= 0) /*checks read bytes, if <=0, EOF, dalloc input mem*/
     {
-        if (feof(stdin))
-        {
-            free(input);
-            return (NULL);
-        }
-        else
-        {
-            perror("fgets");
-            free(input);
-            exit(EXIT_FAILURE);
-        }
+        free(input);
+        return (NULL);
     }
+    input[bytes] = '\0'; /*adds NULL to show string end*/
+
     len = strlen(input);
 
     if (len > 0 && input[len - 1] == '\n') /*calculate length of input string*/
