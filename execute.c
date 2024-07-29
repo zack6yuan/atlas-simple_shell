@@ -8,14 +8,14 @@
 
 void execute_command(char *command)
 {
-    pid_t pid;
+    pid_t pid; /*variable for process ID*/
     int status;
-    pid = fork();
+    pid = fork(); /*called to create new process*/
 
-    if (pid == -1)
+    if (pid == -1) /*checks if fork failed*/
     {
         perror("fork");
-        exit(EXIT_FAILURE);
+        exit(EXIT_FAILURE); /*exits with failure status*/
     }
     if (pid == 0)
     {
@@ -25,6 +25,6 @@ void execute_command(char *command)
     }
     else
     {
-        waitpid(pid, &status, 0);
+        waitpid(pid, &status, 0); /*suspends the parent until child completes*/
     }
     }
