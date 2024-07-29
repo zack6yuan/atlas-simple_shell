@@ -8,12 +8,12 @@ char *read_input(void)
 {
     char *input;
     size_t len;
-    input = malloc(MAX_INPUT_SIZE);
+    input = malloc(MAX_INPUT_SIZE); /*allocate memory for the input string*/
 
-    if (!input)
+    if (!input) /*checks if malloc failed*/
     {
         perror("malloc");
-        exit(EXIT_FAILURE);
+        exit(EXIT_FAILURE); /*exits with failure status*/
     }
 
     if (fgets(input, MAX_INPUT_SIZE, stdin) == NULL)
@@ -32,9 +32,9 @@ char *read_input(void)
     }
     len = strlen(input);
 
-    if (len > 0 && input[len - 1] == '\n')
+    if (len > 0 && input[len - 1] == '\n') /*calculate length of input string*/
     {
-        input[len - 1] = '\0';
+        input[len - 1] = '\0'; /*if last char is /n, replace with NULL char*/
     }
-    return (input);
+    return (input); /*return input string*/
 }
