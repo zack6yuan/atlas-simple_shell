@@ -1,12 +1,29 @@
 .TH simple_shell
+
 .SH NAME
 simple_shell
+
 .SH DESCRIPTION
-a simplified version of the unix shell that receives and interprets commands, and gives user feedback. 
+A simplified version of the unix shell that can do the following:
+ - Receive commands.
+ - Interpret commands.
+ - Give user feedback.
+
 .SH OPTIONS
-Standard bash commands, run man bash for more information 
+Standard bash commands, run man bash for more information. 
+
+.SH LIBRARIES
+<stdio.h> - header file that allows a C program to interact with standard input and output.
+<stdlib.h> - header file that allows a C program to access the C standard library.
+<string.h> - header file that contains functions that can affect strings.
+<unistd.h> - header file that allows access to POSIX, where we can use fork.
+<sys/types.h> - header file that is used to define data types pid and ppid.
+<sys/wait.h> - header file that defines the id_t and pid_t types.
+<ctype.h> - header file that can be used to change individual characters.
+
 .SH COMPILATION
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
+
 .SH AUTHORS
-Zack Yuan
-Tyler Whitchurch
+Zack Yuan <zack.yuan@atlasschool.com>
+Tyler Whitchurch <tyler.whitchurch@atlasschool.com>
